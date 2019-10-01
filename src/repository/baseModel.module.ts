@@ -6,9 +6,9 @@ import { Pole } from './entity/pole.entity';
 import { SensorData } from './entity/sensorData.entity';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), TypeOrmModule.forFeature([Pole]), TypeOrmModule.forFeature([SensorData])],
+  imports: [TypeOrmModule.forFeature([Pole]), TypeOrmModule.forFeature([SensorData])],
   providers: [PoleService,SensorDataService],
-  controllers: [],
-  exports: [TypeOrmModule]
+  controllers: []
+  //exports: [TypeOrmModule]
 })
 export class BaseModelModule {}
